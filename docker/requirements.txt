@@ -1,0 +1,6 @@
+# Django
+django
+
+# Rest
+djangorestframework
+djangorestframework_simplejwt
