@@ -119,7 +119,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL  = '/static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
@@ -133,7 +133,6 @@ AUTH_USER_MODEL = 'DB.User'
 
 MEDIA_URL = '//'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'staic/')
-
 
 
 DATETIME_FORMAT = "H:i d/m/y"
@@ -171,3 +170,12 @@ LOGGING = {
         },
     },
 }
+
+
+EMAIL_OTP = (os.getenv('EMAIL_OTP').lower() == 'true')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
