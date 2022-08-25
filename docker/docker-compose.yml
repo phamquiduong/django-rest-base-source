@@ -4,9 +4,8 @@ services:
     build:
       context: ../
       dockerfile: docker/Dockerfile-django
-    command: bash -c "cd code/docker &&
-                      pip install -r requirements.txt &&
-                      cd ../src &&
+    command: bash -c "cd code/src &&
+                      python manage.py makemigrations DB &&
                       python manage.py migrate &&
                       python manage.py runserver 0.0.0.0:8000"
     volumes:
