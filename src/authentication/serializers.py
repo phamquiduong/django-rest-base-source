@@ -61,3 +61,10 @@ class EmailVerificationSerializer(serializers.ModelSerializer):
 
     class Meta:
         fields = ['token']
+
+
+class ForgotPasswordSerializer(serializers.ModelSerializer):
+    email = serializers.EmailField()
+
+    class Meta:
+        fields = ['email']
