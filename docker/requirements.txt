@@ -1,0 +1,7 @@
+# Django
+django
+
+# Rest
+djangorestframework
+djangorestframework_simplejwt
+django-rest-swagger
